@@ -1,7 +1,7 @@
 package study.no10.p1;
 /**
  * 内部类可以访问外部类所有成员的访问权
-*Sequce.java
+ * Sequce.java
  * @author sunny
  *2016年10月27日上午7:47:57
  */
@@ -15,7 +15,7 @@ public class Sequce {
 		}
 	}
 	//内部类
-	private class sequnceSelector implements  Selector{
+	private class SequnceSelector implements  Selector{
 		private int i =0;
 		@Override
 		public boolean end() {
@@ -33,13 +33,24 @@ public class Sequce {
 		public void next() {
 			if(i<items.length){i++;}
 		}
+		
+		public Sequce getSequce(){
+			return Sequce.this;
+		}
 	}
 	
 	//获取一个selector
 	public Selector getSelector(){
-		return new sequnceSelector();
+		return new SequnceSelector();
 	}
 	
+	public SequnceSelector inner(){
+		return new SequnceSelector();
+	}
+	
+	public int size(){
+		return items.length;
+	}
 	//测试
 	public static void main(String[] args) {
 		StrTest str = new StrTest();
@@ -52,5 +63,9 @@ public class Sequce {
 			System.out.println(se.current());
 			se.next();
 		}
+		Sequce.SequnceSelector sequnceSelector = s.inner();
+		Sequce.SequnceSelector sequnceSelector1 = s.new SequnceSelector();
+		System.out.println(sequnceSelector.getSequce().size());
+		System.out.println(sequnceSelector1.getSequce().size());
 	}
 }
