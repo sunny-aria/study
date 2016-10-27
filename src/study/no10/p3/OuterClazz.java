@@ -5,12 +5,9 @@ import study.no10.p2.Destination;
 public class OuterClazz {
 	
 	
-	protected class InnerClazz implements  Destination{
-
-		private int a = 0;
+	public class InnerClazz implements  Destination{
 
 		public InnerClazz() {
-			// TODO Auto-generated constructor stub
 		}
 
 		@Override
@@ -20,8 +17,4 @@ public class OuterClazz {
 		
 	}
 	
-	
-	public static void main(String[] args) {
-		
-	}
 }

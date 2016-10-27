@@ -6,4 +6,14 @@ package study.no9.factoryModel;
  */
 public interface CycleFactory {
 		Cycle getCycle(String message);
+		
+		//测试接口内部类，public 的
+		class SunnyInnerFactoryImpl implements CycleFactory{
+
+			@Override
+			public Cycle getCycle(String message) {
+				return new Unicycle(message);
+			}
+			
+		}
 }

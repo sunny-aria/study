@@ -1,4 +1,5 @@
 package study.no10.p1;
+
 /**
  * 内部类可以访问外部类所有成员的访问权
  * Sequce.java
