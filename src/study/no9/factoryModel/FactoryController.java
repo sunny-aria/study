@@ -20,7 +20,8 @@ public class FactoryController {
 	
 	public static void main(String[] args) {
 		//此处相当于Controller 类的业务处理，接收参数后进行业务处理
-		String message ="<xml>factory</xml>";
+//		String message ="<xml>factory</xml>";
+		String message ="1";
 		System.out.println(getMessage(message));
 		
 	}
