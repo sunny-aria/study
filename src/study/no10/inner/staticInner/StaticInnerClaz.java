@@ -2,7 +2,7 @@ package study.no10.inner.staticInner;
 
 import study.no10.inner.factoryModel.Cycle;
 /**
- * 	嵌套内部类，static 类
+ * 	嵌套内部类，当内部类为static 时
  * 1.创建嵌套类的对象，并不需要外围类的对象
  * 2.不能从嵌套类对象访问非静态外围类对象
  * 3.不能使用外围类.this 返回外围类引用

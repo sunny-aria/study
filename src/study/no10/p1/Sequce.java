@@ -38,6 +38,13 @@ public class Sequce {
 		public Sequce getSequce(){
 			return Sequce.this;
 		}
+		
+		public void reverseSelector(){
+			for(int j=items.length-1;j>0;j--){
+				System.out.println(items[j]);
+			}
+		}
+		
 	}
 	
 	//获取一个selector
@@ -57,7 +64,8 @@ public class Sequce {
 		StrTest str = new StrTest();
 		Sequce s = new Sequce(10);
 		for(int i=0;i<10;i++){
-			s.add(str);
+//			s.add(str);
+			s.add(str.toString()+i);
 		}
 		Selector se = s.getSelector();
 		while(!se.end()){
@@ -68,5 +76,7 @@ public class Sequce {
 		Sequce.SequnceSelector sequnceSelector1 = s.new SequnceSelector();
 		System.out.println(sequnceSelector.getSequce().size());
 		System.out.println(sequnceSelector1.getSequce().size());
+		System.out.println("-----------------------");
+		sequnceSelector.reverseSelector();
 	}
 }
