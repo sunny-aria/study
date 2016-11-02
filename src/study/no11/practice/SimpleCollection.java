@@ -1,4 +1,4 @@
-package study.no11.practice2;
+package study.no11.practice;
 
 import java.util.Collection;
 import java.util.HashSet;
