@@ -7,3 +7,8 @@
 *.jar
 *.war
 *.ear
+#eclipse ignore
+.classpath
+.project
+.settings/
+bin/
