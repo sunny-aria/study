@@ -13,8 +13,8 @@ public class Practice12 {
 			la.add(i);
 		}
 		
-		//Ê¹ÓÃlistIterator(int index) ·´ÏòÊä³ölist
-		//ListIterator ¿ÉÒÔÊ¹ÓÃprevious() or next() ÏòÇ°²éÕÒ»òÏòºó²éÕÒ
+		//ä½¿ç”¨listIterator(int index) åå‘è¾“å‡ºlist
+		//ListIterator å¯ä»¥ä½¿ç”¨previous() or next() å‘å‰æŸ¥æ‰¾æˆ–å‘åæŸ¥æ‰¾
 		ListIterator<Integer> iterator = la.listIterator(la.size());
 		
 		while(iterator.hasPrevious()){

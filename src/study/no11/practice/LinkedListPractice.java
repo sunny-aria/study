@@ -4,10 +4,10 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 /**
- * ²âÊÔlinkedList ²åÈë
+ * æµ‹è¯•linkedList æ’å…¥
  * LinkedListPractice.java
  * @author sunny
- * 2016Äê11ÔÂ3ÈÕÉÏÎç8:16:27
+ * 2016å¹´11æœˆ3æ—¥ä¸Šåˆ8:16:27
  */
 public class LinkedListPractice {
 
