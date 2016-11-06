@@ -3,7 +3,12 @@ package study.no11.practice;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
+/**
+ * 
+ * MapTest.java
+ * @author sunny
+ * 2016年11月5日下午12:52:44
+ */
 public class MapTest {
 
 	public static void main(String[] args) {
