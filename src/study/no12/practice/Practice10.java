@@ -45,6 +45,15 @@ public class Practice10 {
 		}
 	}
 	
+	void ffff(){
+		try{
+			g();
+		}catch(MyExcepitonOne one){
+//			one.printStackTrace(System.out);
+			throw new RuntimeException(one);//抛出RuntimeException(),这种异常，编译器不需要异常说明
+		}
+	}
+	
 	public static void main(String[] args) {
 		Practice10 p10 = new Practice10();
 		try {
@@ -64,5 +73,15 @@ public class Practice10 {
 			}catch(Exception e){
 				e.printStackTrace(System.out);
 			}
+			
+			System.out.println("###############################");
+			//练习11
+			try{
+				p10.ffff();
+			}catch(Exception e){
+				e.printStackTrace(System.out);
+			}
+			
+			
 	}
 }
