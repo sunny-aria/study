@@ -15,12 +15,12 @@ public class Practice12 {
 			+" Did gyre and gimble in the wabe.\n"
 			+ "All mimsy were the borogoves,\n"
 			+ "And the mome raths outgrabe.\n\n"
-			+ "Beware the Jabberwock,my son,\n"
+			+ "Beware the Jabberwock, my son,\n"
 			+ "The jaws tat bite,the claws that catch.\n"
 			+ "Beware the Jubjub bird, and shun\n"
 			+ "The frumious Bandersnatch. "		;
 	public static void main(String[] args) {
-		String regx = "\\s+([^A-Z][a-z]*)\b*";
+		String regx = "\\s+([^A-Z][a-z]*)\\b*";
 		Matcher m = Pattern.compile(regx).matcher(POEM);
 		Set<String> set = new LinkedHashSet<String>();
 		while(m.find()){
