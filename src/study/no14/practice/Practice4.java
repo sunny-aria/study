@@ -1,5 +1,7 @@
 package study.no14.practice;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class Practice4 {
 		}else{
 			c.draw();
 		}
-		
+		System.out.println("---练习5---");
 		rotete(c);//练习5
 		
 		
@@ -30,7 +32,28 @@ public class Practice4 {
 		
 		for(Shape shape:shapes){
 			shape.draw();
-			
+		}
+		System.out.println("-----练习6------");//区分类型，设置标识
+		List<Shape> shapess = Arrays.asList(new Circle(1),new Square(2),new  Riangle(3) );
+		
+		for(Shape shape:shapess){
+			shape.draw();
+		}
+		System.out.println("---------练习9--------");
+		Circle c9=new Circle();
+		Class claz = c9.getClass();
+		for(Class in:claz.getInterfaces()){
+			System.out.println(in.getName());
+		}
+		Class sdf = claz.getSuperclass();
+		System.out.println(sdf.getName());
+		Field [] fields = claz.getDeclaredFields();
+		for(Field f:fields){
+			System.out.println(f.getName());
+		}
+		Method[] ms = claz.getDeclaredMethods();
+		for(Method m:ms){
+			System.out.println(m.getName());
 		}
 	}
 
@@ -38,30 +61,43 @@ public class Practice4 {
 abstract class Shape{
 	void draw(){ System.out.println(this+".draw()");}
 	abstract public String toString();
+	int flag;
 }
 class Circle extends Shape{
-
+	public Circle() {
+	}
+	public Circle(int flag) {
+		this.flag=flag;
+	}
 	@Override
 	public String toString() {
 		
-		return "Circle";
+		return "Circle"+flag;
 	}
 	
 }
 class Square extends Shape{
-
+	public Square() {
+	}
+	public Square(int flag) {
+		this.flag=flag;
+	}
 	@Override
 	public String toString() {
 		
-		return "Square";
+		return "Square"+flag;
 	}
 }
 class Riangle extends Shape{
-
+	public Riangle() {
+	}
+	public Riangle(int flag) {
+		this.flag=flag;
+	}
 	@Override
 	public String toString() {
 		
-		return "Riangle";
+		return "Riangle"+flag;
 	}
 	
 }
