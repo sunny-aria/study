@@ -3,7 +3,8 @@ package study.no14.practice.typinfo;
 import java.util.ArrayList;
 
 public class Pets {
-	public static final PetCreator creator = new LiteralPetCreator();
+//	public static final PetCreator creator = new LiteralPetCreator();
+	public static final UseFactoryPetCreator creator = new UseFactoryPetCreator();
 	public static Pet randomPet(){
 		return creator.randomPet();
 	}
