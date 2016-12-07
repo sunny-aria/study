@@ -9,6 +9,7 @@ import java.lang.reflect.Proxy;
  * 2016年12月7日上午8:35:45
  */
 public class NullRobot {
+	//使用动态代理创建一个Null 对象
 	public static Robot newNullRobot(Class<? extends Robot> type){
 		return (Robot) Proxy.newProxyInstance(NullRobot.class.getClassLoader(), 
 				new Class[]{Null.class,Robot.class}, new NullRobotProxyHandler(type));
