@@ -15,7 +15,7 @@ import study.no15.practice.story.StoryGenerator;
  * @author sunny
  * 2016年12月14日上午7:35:27
  */
-public class Practice16 {
+public class Generators {
 
 	public static <T> Collection<T> fill(Collection<T> coll,Generator<T> gen,int n){
 		for(int i=0;i<n;i++){
