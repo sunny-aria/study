@@ -13,7 +13,7 @@ public class Practice20Impl implements IPractice20 {
 	public int g() {
 		return 5;
 	}
-	
+	//泛型擦除边界为Product
 	public <T extends Product> void  a(T product){
 		System.out.println(product);
 		System.out.println(f());
