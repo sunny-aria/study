@@ -15,6 +15,8 @@ public class Practice20Impl implements IPractice20 {
 	}
 	//泛型擦除边界为Product
 	public <T extends Product> void  a(T product){
+		System.out.println(product instanceof Product);
+		System.out.println(product instanceof IPractice20);
 		System.out.println(product);
 		System.out.println(f());
 		System.out.println(g());
