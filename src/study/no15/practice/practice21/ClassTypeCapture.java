@@ -15,7 +15,7 @@ class House extends Building{}
  */
 public class ClassTypeCapture<T> {
 	Class<T> kind;//引入类型标签
-	Map<String,Class<T>> map=new HashMap<String,Class<T>>();
+	Map<String,Class<?>> map=new HashMap<String,Class<?>>();
 	public ClassTypeCapture(Class<T> kind){
 		this.kind=kind;
 	}
@@ -23,12 +23,12 @@ public class ClassTypeCapture<T> {
 		return kind.isInstance(arg);
 	}
 	
-	public  void addType(String typename,Class<T> kind){
+	public  void addType(String typename,Class<?> kind){
 		map.put(typename, kind);
 	}
 	
-	public T creattNew(String typename) throws InstantiationException, IllegalAccessException{
-		Class<T> t = map.get(typename);
+	public  Object creattNew(String typename) throws InstantiationException, IllegalAccessException{
+		Class<?> t = map.get(typename);
 		return t.newInstance();
 	}
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException {
