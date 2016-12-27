@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class Practice28 {
 	
-	 void f(List<? super Fruit> t){
-		Generatic1< Fruit> g = new Generatic1<Fruit>();
+	 void f(List<? super Apple> t){
+		Generatic1<Fruit> g = new Generatic1<Fruit>();
 //		g.f(t);
 	}
 	void g(List<? extends Apple> t){
