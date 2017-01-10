@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+
 /**
  * 将函数对象用作策略
  * Functional.java
@@ -185,6 +186,7 @@ public class Functional {
 		//练习42
 		List<Practice42> lp = Arrays.asList(new Practice42(10),new Practice42(11),new Practice42(12),new Practice42(13));
 		System.out.println(reduce(lp, new Pratice42Adder()));
+
 	}
 
 }
