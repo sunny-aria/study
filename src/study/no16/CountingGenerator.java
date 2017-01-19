@@ -18,7 +18,7 @@ public class CountingGenerator {
 			return result;
 		}
 	}
-	static char[] chars = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").toCharArray();
+	public static char[] chars = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").toCharArray();
 	public static class Character implements Generator<java.lang.Character>{
 		int index=-1;
 		@Override
@@ -30,7 +30,7 @@ public class CountingGenerator {
 	}
 	public static class String implements Generator<java.lang.String>{
 		private int length=7;
-		Generator<java.lang.Character> cg = new Character();
+		protected Generator<java.lang.Character> cg = new Character();
 		public String(){}
 		public String(int length){this.length=length;}
 		@Override
