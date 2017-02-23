@@ -29,7 +29,7 @@ public class Utilities {
 		Collections.reverse(list);
 		print("reverse:"+list);
 		Collections.rotate(list,3);
-		print("rotate:"+list);
+		print("rotate:"+list); 
 		List<String> source = Arrays.asList("in thre matrix".split(" "));
 		Collections.copy(list, source);
 		print("copy:"+list);
