@@ -12,8 +12,7 @@ import java.nio.channels.FileChannel;
  * 2017年3月9日上午8:15:10
  */
 public class BufferToText {
-
-	public static void main(String[] args) throws IOException {
+	public static void test()throws IOException{
 		FileChannel fc = new FileOutputStream("data.txt").getChannel();
 		ByteBuffer buff = ByteBuffer.allocate(24);
 		buff.asCharBuffer().put("some text");
@@ -21,9 +20,19 @@ public class BufferToText {
 		fc.close();
 		fc = new FileInputStream("data.txt").getChannel();
 		fc.read(buff);
-		buff.flip();
+		buff.flip();//将position 置为0，limit 置为position，用于读取缓冲器
 		System.out.println(buff.asCharBuffer());
 		fc.close();
+	}
+	
+	public static void main(String[] args) throws IOException {
+		ByteBuffer buff = ByteBuffer.allocate(24);
+		buff.asCharBuffer().put("sunny test");
+		buff.rewind();//倒回数据开始的部分
+		char c;
+		while((c=buff.getChar())!=0){
+			System.out.println(c);
+		}
 		
 	}
 
