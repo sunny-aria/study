@@ -10,7 +10,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
 import study.no15.practice.Fibonacci;
 
@@ -35,8 +34,8 @@ public class Practice5 implements Callable<Integer> {
 		}
 		for(Future<Integer> fu:list){
 			try {
-				if(fu.isDone()){
-					System.out.println(fu.get());
+				if(fu.isDone()){//调用get()之前，先调用具有超时的get()，或者调用isDone()查看任务是否完成
+					System.out.println(fu.get());//get()将阻塞，直至结果准备就绪
 				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
