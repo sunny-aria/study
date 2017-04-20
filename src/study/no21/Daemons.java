@@ -3,6 +3,7 @@
  */
 package study.no21;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -44,10 +45,18 @@ class Daemon implements Runnable{
 	
 }
 class DaemonSpawn implements Runnable{
-
+	private Random r = new Random(47);
 	@Override
 	public void run() {
-		while(true){ Thread.yield();}
+//		while(true){ Thread.yield();}
+		while(true)
+			try {
+				TimeUnit.SECONDS.sleep(Long.parseLong(r.nextInt(10)+""));
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 	}
 	
 }
