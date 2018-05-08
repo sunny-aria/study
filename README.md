@@ -61,4 +61,4 @@
 * 18.开发一个新feature，最好新建一个分支；
 *    如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name> 强行删除。
 * 19.设置 .gitignore 忽略该忽略的文件   vim .gitignore  设置忽略规则
-* 20. git config --global alias.st status  设置别名
+*  git config --global alias.st status  设置别名
