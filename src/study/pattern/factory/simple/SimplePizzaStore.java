@@ -6,7 +6,7 @@ package study.pattern.factory.simple;
  * @Auther: haodong
  * @Date: 2018/10/30
  */
-public class PizzaStore {
+public class SimplePizzaStore {
     private SimpleFactory factory;
 
     public SimpleFactory getFactory() {

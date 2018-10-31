@@ -8,7 +8,7 @@ package study.pattern.factory.simple;
  */
 public class TestSimpleFactory {
     public static void main(String[] args) {
-        PizzaStore store = new PizzaStore();
+        SimplePizzaStore store = new SimplePizzaStore();
         SimpleFactory factory = new SimpleFactory();
         store.setFactory(factory);
         store.pizzaOrderCreate("meat");
